@@ -81,7 +81,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     href="/login"
-                                    className="block font-medium text-sm text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 md:inline"
+                                    className="block font-medium text-sm text-white bg-cyan-500 hover:bg-gray-600 active:bg-cyan-900 md:inline"
                                 >
                                     Register
                                 </NavLink>

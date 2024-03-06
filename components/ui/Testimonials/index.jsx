@@ -49,7 +49,7 @@ const Testimonials = () => {
                         See what others saying about us
                     </h2>
                     <p className="mt-3 text-gray-600">
-                        Listen to what the experts around the world are saying about us.
+                        Listen to what the partners around the LA are saying about us.
                     </p>
                 </div>
                 <div className="mt-12">

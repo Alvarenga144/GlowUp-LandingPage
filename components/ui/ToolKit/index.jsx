@@ -1,44 +1,44 @@
 import SectionWrapper from "../../SectionWrapper"
 import Image from "next/image"
-import wordpress from "../../../public/icons/wordpress.svg"
-import nextjs from "../../../public/icons/nextjs.svg"
-import tailwind from "../../../public/icons/tailwind.svg"
-import nodejs from "../../../public/icons/nodejs.svg"
-import vercel from "../../../public/icons/vercel.svg"
-import figma from "../../../public/icons/figma.svg"
+import cleanHands from "../../../public/icons/clean-hands-wash-soap-water-drop-svgrepo-com.svg"
+import houseHold from "../../../public/icons/clean-household-housekeeping-towel-svgrepo-com.svg"
+import toclean from "../../../public/icons/to-clean-svgrepo-com.svg"
+import shower from "../../../public/icons/shower-svgrepo-com.svg"
+import filter from "../../../public/icons/filter-svgrepo-com.svg"
+import toilet from "../../../public/icons/toilet-bowl-svgrepo-com.svg"
 
 const ToolKit = () => {
 
     const features = [
         {
-            icon: wordpress,
-            title: "Wordpress",
-            desc: "WordPress is an open-source content management system (CMS)."
+            icon: cleanHands,
+            title: "Item 1",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
         {
-            icon: nextjs,
-            title: "Next.js",
-            desc: "Next.js is a React framework that gives you building blocks to create web apps."
+            icon: houseHold,
+            title: "Item 2",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
         {
-            icon: tailwind,
-            title: "Tailwind CSS",
-            desc: "Tailwind CSS is basically a utility-first CSS framework for rapidly building UIs."
+            icon: toclean,
+            title: "Item 3",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
         {
-            icon: nodejs,
-            title: "Node.js",
-            desc: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment."
+            icon: shower,
+            title: "Item 4",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
         {
-            icon: vercel,
-            title: "Vercel",
-            desc: "Vercel is a cloud platform that enables developers to host web apps."
+            icon: filter,
+            title: "Item 5",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
         {
-            icon: figma,
-            title: "Figma",
-            desc: "Figma is a web-based graphics editing and user interface design app."
+            icon: toilet,
+            title: "Item 6",
+            desc: "texto de descripción correspondiente al item de que se esta resaltando"
         },
     ]
 

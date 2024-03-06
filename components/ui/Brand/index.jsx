@@ -6,7 +6,7 @@ const Brand = () => (
             src="/blinder.svg"
             width={120}
             height={50}
-            alt="Blinder logo"
+            alt="GlowUp logo"
         />
     </Link>
 )
