@@ -1,3 +1,7 @@
+**Video tutorial para configurar cuenta de emailjs: https://youtu.be/bMq2riFCF90?si=iRGypwpgptV5mkWy** <br />
+**documentación de EmailJS: https://www.emailjs.com/docs/examples/reactjs/**
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
