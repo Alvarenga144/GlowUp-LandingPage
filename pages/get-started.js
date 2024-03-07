@@ -1,15 +1,27 @@
 import Head from "next/head";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
-import Checkbox from "../components/ui/Checkbox";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function GetStarted() {
-  const servicesItems = [
-    "Mobile development",
-    "UI/UX Design",
-    "web development",
-    "SEO",
-  ];
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <>
@@ -36,14 +48,16 @@ export default function GetStarted() {
               </p>
             </div>
             <div className='flex-1 mt-12 sm:max-w-lg lg:max-w-md lg:mt-0'>
+
               <form
-                onSubmit={(e) => e.preventDefault()}
+                ref={form} onSubmit={sendEmail}
                 className='space-y-5 font-medium'>
                 <div>
                   <label>Full name</label>
                   <Input
                     aria-label='Full name'
-                    type='text'
+                    type="text" 
+                    name="user_name"
                     required
                     className='mt-2 focus:border-indigo-600'
                   />
@@ -53,6 +67,7 @@ export default function GetStarted() {
                   <Input
                     aria-label='Email'
                     type='email'
+                    name="user_email"
                     required
                     className='mt-2 focus:border-indigo-600'
                   />
@@ -61,30 +76,17 @@ export default function GetStarted() {
                   <label>Message</label>
                   <textarea
                     aria-label='Message'
+                    name="message"
                     required
                     className='w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg'></textarea>
                 </div>
-                {/*
-                  <div>
-                    <label>Service</label>
-                    <ul className='mt-3 flex flex-wrap gap-x-8 gap-y-3 font-normal max-w-md sm:gap-x-16'>
-                      {servicesItems.map((item, idx) => (
-                        <li key={idx} className='flex gap-x-2 items-center'>
-                          <Checkbox id={`service-${idx}`} />
-                          <label htmlFor={`service-${idx}`} className='text-sm'>
-                            {item}
-                          </label>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                */}
                 <div className='pt-1'>
-                  <Button className='w-full text-white bg-cyan-500 hover:bg-gray-600 active:bg-cyan-700 ring-offset-2 ring-cyan-700 focus:ring'>
+                  <Button value="Send" className='w-full text-white bg-cyan-500 hover:bg-gray-600 active:bg-cyan-700 ring-offset-2 ring-cyan-700 focus:ring'>
                     Submit
                   </Button>
                 </div>
               </form>
+              
             </div>
           </div>
         </div>
